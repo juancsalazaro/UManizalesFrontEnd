@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">
+    <strong> Producto: {{ product.title }} </strong>
+  </div>
+  <div class="card-main">
+    <img src="{{ product.thumbnail }}" alt="{{ product.thumbnail }}" onerror="this.src='https://ih1.redbubble.net/image.1893341687.8294/fposter,small,wall_texture,product,750x1000.jpg'"/>
+    <p><strong>Descripción: </strong>{{ product.description }}</p>
+  </div>
+  <div class="card-footer">
+    <strong>Precio: {{ product.price }}</strong>
+  </div>
+</div>

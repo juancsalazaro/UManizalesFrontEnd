@@ -1,0 +1,10 @@
+<section class="container">
+  <div class="search">
+    <h2>Realiza La búsqueda de tus productos</h2>
+    <div class="search-input">
+        <input type="text" placeholder="Buscar..." #textSearch />
+        <button (click)="searchProduct(textSearch.value)">Buscar</button>
+    </div>
+  </div>
+  <app-grid-items></app-grid-items>
+</section>

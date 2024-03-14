@@ -1,0 +1,25 @@
+<div class="grid-products">
+  <ng-container *ngFor="let item of products">
+    <div class="card" *ngIf="!loading" (click)="goToProduct(item.id)">
+      <div class="card-header">
+        <strong> Producto: {{ item.title }} </strong>
+      </div>
+      <div class="card-main">
+        <img src="{{ item.thumbnail }}" alt="{{ item.thumbnail }}" onerror="this.src='https://ih1.redbubble.net/image.1893341687.8294/fposter,small,wall_texture,product,750x1000.jpg'"/>
+        <p><strong>Descripción: </strong>{{ item.description }}</p>
+      </div>
+      <div class="card-footer">
+        <strong>Precio: {{ item.price }}</strong>
+      </div>
+    </div>
+  </ng-container>
+  <div class="loading" *ngIf="!loading && products.length < 1">
+    <strong>NO HAY DATOS DE LA BÚSQUEDA</strong>
+  </div>
+  <div class="loading" *ngIf="loading">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"
+      alt="loading"
+    />
+  </div>
+</div>
